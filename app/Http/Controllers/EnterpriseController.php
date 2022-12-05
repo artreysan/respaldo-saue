@@ -9,15 +9,15 @@ class EnterpriseController extends Controller
 {
     public function index(){
         $enterprises = Enterprise::all();
-        return view('/enterprises/home', compact('enterprises'));
+        return view('enterprise/index', compact('enterprises'));
     }
 
-    public function register()
+    public function create()
     {
-        return view('/enterprises/register');
+        return view('enterprise/create');
     }
 
-    public function create (Request $request)
+    public function store (Request $request)
     {
 
         $enterprise = new Enterprise();
@@ -27,6 +27,8 @@ class EnterpriseController extends Controller
 
         $enterprise->save();
 
-        return view('/enterprises/register');
+        $enterprises = Enterprise::all();
+
+        return view('enterprise/index', compact('enterprises'));
     }
 }
