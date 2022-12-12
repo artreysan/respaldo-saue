@@ -12,6 +12,7 @@ use App\Models\Authorizer;
 use App\Models\Enterprise;
 use App\Models\Collaborator;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PetitionController extends Controller
 {
@@ -40,6 +41,19 @@ class PetitionController extends Controller
         $equipment = new Petition();
         return view('collaborator/petition/create', compact('collaborator','enterprise','equipment','accounts'));
     }
+
+
+    public function downloadPdf($solicitud){
+        $path = storage_path('pdf/');
+        $pdf_name = $solicitud->fileID.'_sau.pdf';
+        $pdf = Pdf::loadView('users.solicitud.pdf.sau', array('solicitud'=>$solicitud));
+        $pdf->save($path.'/'.$pdf_name);
+        $pdf->setPaper('a4');
+        $fileb64 = file_get_contents(storage_path('pdf/').$pdf_name);
+        return $pdf->stream($pdf_name);
+    }
+
+
 
     public function store (Request $request)
     {
@@ -87,7 +101,7 @@ class PetitionController extends Controller
         $petition->startTime         = time();
         $petition->fileID            = auth()->user()->id.$petition->startTime;
 
-
+        $this->downloadPdf($petition);
         $petition->save();
 
         $petitions = Petition::all();
