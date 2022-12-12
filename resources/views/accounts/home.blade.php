@@ -24,19 +24,19 @@
         <table class="table">
             <thead class="table-dark">
                 <th>Id</th>
-                <th>Gitlab</th>
-                <th>Glpi </th>
-                <th>Jira</th>
-                <th>Directorio Activo</th>
+                <th>cuenta_gitlab</th>
+                <th>cuenta_glpi </th>
+                <th>cuenta_jira</th>
+                <th>cuenta_da</th>
                 <th>Ver detalles</th>
             </thead>
             @foreach ($accounts as $accunt)
                 <tbody>
                     <td>{{ $accunt->id }}</td>
-                    <td>{{ $accunt->account_gitlab}}</td>
-                    <td>{{ $accunt->account_glpi}}</td>
-                    <td>{{ $accunt->account_jira}}</td>
-                    <td>{{ $accunt->account_da}}</td>
+                    <td>{{ $accunt->cuenta_gitlab}}</td>
+                    <td>{{ $accunt->cuenta_glpi}}</td>
+                    <td>{{ $accunt->cuenta_jira}}</td>
+                    <td>{{ $accunt->cuenta_da}}</td>
                     <th>Propietario</th>
                 </tbody>
             @endforeach

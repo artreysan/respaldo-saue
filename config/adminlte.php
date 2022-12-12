@@ -153,7 +153,7 @@ return [
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => true,
     'layout_fixed_footer' => true,
-    'layout_dark_mode' => null,
+    'layout_dark_mode' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -185,6 +185,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
     |
     */
+
     'classes_body' => '',
     'classes_brand' => '',
     'classes_brand_text' => '',
@@ -320,7 +321,7 @@ return [
         ['header' => 'Bitácora'],
         [
             'text' => 'Usuarios',
-            'url'  => 'user',
+            'url'  => 'admin/users/index',
             'icon' => 'fas fa fa-user',
         ],
         [
@@ -328,8 +329,14 @@ return [
             'icon' => 'fas fa-file',
             'submenu' => [
                 [
+                    'text' => 'Nueva',
+                    'url'  => '/petition/register',
+                    'icon_color' => 'white',
+                    'icon' => 'fas fa-plus',
+                ],
+                [
                     'text' => 'Ver todas',
-                    'url'  => 'petition',
+                    'url'  => '/petition/home',
                     'icon' => 'far fa-eye',
                 ],
                 [
@@ -419,13 +426,13 @@ return [
                 ],
                 [
                     'text' => 'Nuevo',
-                    'url'  => 'collaborator/create',
+                    'url'  => '/collaborators/register',
                     'icon_color' => 'white',
                     'icon' => 'fas fa-plus',
                 ],
                 [
                     'text' => 'Ver todos',
-                    'url'  => 'collaborator',
+                    'url'  => '/collaborators/home',
                     'icon' => 'far fa-eye',
                 ],
                 // [
@@ -488,7 +495,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Ver todos',
-                    'url'  => 'project/index',
+                    'url'  => 'projects/home',
                     'icon' => 'far fa-eye',
                 ],
                 [
@@ -504,13 +511,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Registrar nuevo equipo',
-                    'url'  => 'equipment/create',
+                    'url'  => 'equipment/register',
                     'icon_color' => 'white',
                     'icon' => 'fas fa-plus',
                 ],
                 [
                     'text' => 'Ver todos',
-                    'url'  => 'equipment',
+                    'url'  => 'equipment/home',
                     'icon' => 'far fa-eye',
                 ],
             ],
@@ -521,20 +528,20 @@ return [
             'submenu' => [
                 [
                     'text' => 'Registrar nueva empresa',
-                    'url'  => 'enterprise/create',
+                    'url'  => 'enterprises/register',
                     'icon_color' => 'white',
                     'icon' => 'fas fa-plus',
                 ],
                 [
                     'text' => 'Ver todas',
-                    'url'  => 'enterprise',
+                    'url'  => 'enterprises/home',
                     'icon' => 'far fa-eye',
                 ],
             ]
         ],
         [
             'text' => 'Tickets',
-            'url'  => 'tickets/index',
+            'url'  => 'ticket/home',
             'icon' => 'fas fa-file-alt',
         ],
     ],

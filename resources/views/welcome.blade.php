@@ -27,11 +27,11 @@
                 <br>
                 <br>
                 <div>
-                    <h2>SAUE</h2>
-                    <h5>Sistema de alta de usuarios externos en la UTIC</h5>
+                    <h2>SAU</h2>
                 </div>
                 <br>
                 <a href="/login" class="btn btn-primary btn-md active">Ingresar</a>
+                <a href="/register" class="btn btn-default btn-md active">Crear cuenta</a>
                 <br>
                 <br>
             </div>

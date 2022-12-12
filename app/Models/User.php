@@ -31,11 +31,8 @@ class User extends Authenticatable
         'apellido_paterno',
         'apellido_materno',
         'email',
+        'position',
         'password',
-        'role_id',
-        'enterprise_id',
-        'location_id',
-
     ];
 
     /**
@@ -56,24 +53,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function location()
-    {
-        return $this->belongsTo(Location::class, 'location_id');
-    }
-
-    public function role()
-    {
-        return $this->belongsTo(Role::class,'role_id');
-    }
-
-    public function enterprise()
-    {
-        return $this->belongsTo(Enterprise::class,'enterprise_id');
-    }
-
-    public function petition()
-    {
-        return $this->belongsTo(Petition::class,'petition_id');
-    }
 }

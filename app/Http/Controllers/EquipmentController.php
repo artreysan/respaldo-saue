@@ -4,26 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Equipment;
 use Illuminate\Http\Request;
-use App\Http\Controllers\View;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Redirect;
 
 class EquipmentController extends Controller
 {
 
     public function index(){
         $equipments = Equipment::all();
-        return view('equipment/index', compact('equipments'));
+        return view('equipment.home', compact('equipments'));
     }
 
-    public function create(){
+    public function register()
+    {
 
-        $equipment = new Equipment();
-        return view('equipment/create');
+        return view('equipment.register');
     }
 
-
-    public function store (Request $request)
+    public function create (Request $request)
     {
 
         $equipment = new Equipment();
@@ -38,8 +34,6 @@ class EquipmentController extends Controller
 
         $equipment->save();
 
-        $equipments = Equipment::all();
-
-        return view('equipment/index', compact('equipments'));
+        return view('/equipment/register');
     }
 }
