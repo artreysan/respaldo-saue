@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Rol;
 use App\Models\User;
 use App\Models\Location;
-use App\Http\Controllers\save;
 use App\Models\Enterprise;
 use Illuminate\Http\Request;
+use App\Http\Controllers\save;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -37,8 +38,9 @@ class UserController extends Controller
         $enterprises   = Enterprise::all();
         $locations     = Location::all();
         $roles         = Role::all();
+        $rols          = Rol::all();
 
-        return view('user/create', compact('enterprises','locations','roles'));
+        return view('user/create', compact('enterprises','locations','roles','rols'));
     }
     /**
      * Handle an incoming registration request.
@@ -61,7 +63,7 @@ class UserController extends Controller
         $user->role_id            = $request->role_id;
         $user->password           = Hash::make($request->password);
         $user->enterprise_id      = $request->enterprise_id;
-        $user->position           = $request->position;
+        $user->rol_id             = $request->rol_id;
         $user->location_id        = $request->location_id;
 
 

@@ -326,33 +326,7 @@ return [
         [
             'text' => 'Solicitudes',
             'icon' => 'fas fa-file',
-            'submenu' => [
-                [
-                    'text' => 'Ver todas',
-                    'url'  => 'petition',
-                    'icon' => 'far fa-eye',
-                ],
-                [
-                    'text'       => 'Pendiente',
-                    'icon_color' => 'red',
-                    'url'        => '#',
-                ],
-                [
-                    'text'       => 'En proceso',
-                    'icon_color' => 'orange',
-                    'url'        => '#',
-                ],
-                [
-                    'text'       => 'Atendida',
-                    'icon_color' => 'yellow',
-                    'url'        => '#',
-                ],
-                [
-                    'text'       => 'Validada',
-                    'icon_color' => 'green',
-                    'url'        => '#',
-                ],
-            ]
+            'url' => 'petition',
         ],
         [
             'text'    => 'Colaboradores',
@@ -491,11 +465,6 @@ return [
                     'url'  => 'project/index',
                     'icon' => 'far fa-eye',
                 ],
-                [
-                    'text' => 'Cuentas de acceso',
-                    'url'  => 'accounts/home',
-                    'icon' => 'far fa-id-badge',
-                ],
             ],
         ],
         [
@@ -531,11 +500,6 @@ return [
                     'icon' => 'far fa-eye',
                 ],
             ]
-        ],
-        [
-            'text' => 'Tickets',
-            'url'  => 'tickets/index',
-            'icon' => 'fas fa-file-alt',
         ],
     ],
 

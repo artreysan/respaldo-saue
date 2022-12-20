@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Collaborator;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+
 
 class Petition extends Model
 {
@@ -48,6 +51,11 @@ class Petition extends Model
         return $this->belongsTo(Collaborator::class,  'collaborator_id');
     }
 
+    public function equipment()
+    {
+        return $this->belongsTo(Equipment::class,  'equipment_id');
+    }
+
     public function user()
     {
         return $this->hasMany(User::class, 'user_id');
@@ -57,11 +65,5 @@ class Petition extends Model
     {
         return $this->hasMany(Service::class,'service_id');
     }
-
-    public function account()
-    {
-        return $this->hasMany(Service::class,'account_id');
-    }
-
 
 }

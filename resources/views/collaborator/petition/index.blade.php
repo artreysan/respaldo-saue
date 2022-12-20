@@ -18,16 +18,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <a href="petition/create"><button type="button" class="btn btn-danger">Nueva</button></a>
-            </div>
-            <div class="col-md-1">
-                <a href="/dashboard"><button type="button" class="btn btn-secondary">Inicio</button></a>
+            <div class="col-md-2">
+                <a href="/collaborators"><button type="button" class="btn btn-secondary">Ver colaboradores</button></a>
             </div>
         </div>
         <br>
         <table class="table">
-            <thead class="table-dark">
+            <thead class="table-secondary">
                 <th class="col-md-1">Folio</th>
                 <th class="col-md-1">Fecha</th>
                 <th class="col-md-2">Colaborador</th>

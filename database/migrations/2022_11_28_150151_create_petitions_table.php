@@ -16,15 +16,25 @@ return new class extends Migration
         Schema::create('petitions', function (Blueprint $table) {
             $table->id();
 
-            $table->boolean('account_gitlab');
-            $table->boolean('account_jira');
-            $table->boolean('account_glpi');
-            $table->boolean('account_da');
+            //booleanos para confirmar peticiones si se requiere
+            $table->boolean('account_gitlab')->nullable();
+            $table->boolean('account_jira')->nullable();
+            $table->boolean('account_glpi')->nullable();
+            $table->boolean('account_da')->nullable();
 
-            $table->boolean('internet');
-            $table->boolean('vpn');
-            $table->boolean('ip');
-            $table->boolean('nodo');
+            $table->boolean('internet')->nullable();
+            $table->boolean('vpn')->nullable();
+            $table->boolean('ip')->nullable();
+            $table->boolean('nodo')->nullable();
+
+            $table->boolean('access_project')->nullable();
+
+            //Status de la solicitud basada en 4 digitos
+            // 0 = pendiente
+            // 1 = en proceso
+            // 2 = atendida
+            // 3 = validada
+            $table->char('status', 1);
 
             $table->char('tk_glpi_account_1', 30)->nullable();
             $table->char('tk_gitlab_account_1', 30)->nullable();
@@ -46,10 +56,6 @@ return new class extends Migration
             $table->char('tk_ip_0', 30)->nullable();
             $table->char('tk_vpn_0', 30)->nullable();
 
-            $table->boolean('access_project')->nullable();
-
-            $table->char('status', 1);
-
             $table->char('project1', 100)->nullable();
             $table->char('project2', 100)->nullable();
             $table->char('project3', 100)->nullable();
@@ -67,21 +73,10 @@ return new class extends Migration
                 ->references('id')
                 ->on('collaborators');
 
-            $table->unsignedBigInteger('account_id')->nullable();
-            $table->foreign('account_id')
-                ->references('id')
-                ->on('accounts');
-
-            $table->unsignedBigInteger('service_id')->nullable();
-            $table->foreign('service_id')
-                ->references('id')
-                ->on('services');
-
             $table->string('fileID')->nullable()->unique();
 
             $table->unsignedInteger('startTime')->nullable();
             $table->timestamps();
-
 
 
         });

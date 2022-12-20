@@ -14,7 +14,18 @@ class Equipment extends Model
     protected $fillable = [
         'name',
         'description',
+        'equipment_id',
     ];
+
+    public function collaborator()
+    {
+        return $this->belongsTo(Collaborator::class,  'collaborator_id');
+    }
+
+    public function petition()
+    {
+        return $this->belongsTo(Petition::class,  'petition_id');
+    }
 
 
 }

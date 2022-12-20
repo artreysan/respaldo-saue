@@ -3,19 +3,18 @@
 @section('title', 'UTIC')
 
 @section('content_header')
-    <div class="bg-gray bg-opacity-10 border-gray">
-        <div class="row">
-            <div class="col-md-8 p-4">
-                <h4><strong>REGISTRO DE COLABORADOR EXTERNO EN EL SIGTIC:</strong></h4>
-                <h5>Ciudad de México a <?php echo date('j-m-Y'); ?> </h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/logoSAUEcompleto.png" alt="">
-            </div>
+<div class="container-nav">
+    <div class="row">
+        <div class="col-md-1 p-3"></div>
+        <div class="col-md-9 p-3">
+            <h4><strong>Registrar un nuevo colaborador</strong></h4>
+            <h6>Ciudad de México a <?php echo date('j-m-Y'); ?> </h6>
+        </div>
+        <div class="col-md-2 p-3">
+            <img class="imagen-header" src="{{ URL::asset('img/download.png') }}" alt="">
         </div>
     </div>
-    <br>
-    <br>
+</div>
     <br>
     <div class="container">
         <div class="row">
@@ -28,11 +27,12 @@
     </div>
     <br>
     <!--Información del colaborador-->
-    <div class="container table-bordered p-4">
-        <div class="container">
-            <h4><strong>Información del colaborador:</strong></h4>
+    <div class="container card-header bg-secondary">
+            <div class="col-md-4 p-1">
+                <h4><strong>Información del nuevo colaborador:</strong></h4>
+            </div>
         </div>
-        <br>
+    <div class="container table-bordered p-4">
         <form action="{{ route('collaborator.store') }}" method="POST">
             @csrf
             {{-- Inicio del contenedor de los datos del colaborador collaborador_id --}}
@@ -80,6 +80,14 @@
                     </select>
                 </div>
                 <br>
+                {{-- <div class="row">
+                    <div class="col-md-2"><strong>Asignar equipo de computo:</strong></div>
+                    <select name="equipment_id" id="equipment_id">
+                        @foreach ($equipments as $equipment)
+                            <option value="{{ $equipment->id }}">{{ $equipment->tipo }} {{ $equipment->marca }} - {{ $equipment->serie }} - {{ $equipment->modelo }} </option>
+                        @endforeach
+                    </select>
+                </div> --}}
             </div>
     </div>
     <br>
@@ -87,7 +95,7 @@
         <div class="row">
             <div class="col-md-10"></div>
             <div class="col-md-1">
-                <input class="btn btn-secondary btn-lg active" type="submit" value="Registrar">
+                <input class="btn btn-secondary" type="submit" value="Registrar">
             </div>
         </div>
     </div>

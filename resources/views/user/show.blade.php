@@ -56,7 +56,7 @@
                                 <div class="col-md-6">
                                     <div class="card-body">
                                         <p class="card-text">
-                                            <h5>{{$user->enterprise->nombre}}</h5>
+                                            <h5>{{$user->enterprise->name}}</h5>
                                         </p>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                 <div class="col-md-6">
                                     <div class="card-body">
                                         <p class="card-text">
-                                            <h5>{{$user->position}}</h5>
+                                            <h5>{{$user->rol->rol}}</h5>
                                         </p>
                                     </div>
                                 </div>

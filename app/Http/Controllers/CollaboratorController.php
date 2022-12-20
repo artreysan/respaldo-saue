@@ -6,6 +6,7 @@ use App\Models\Rol;
 use App\Models\Account;
 use App\Models\Service;
 use App\Models\Location;
+use App\Models\Petition;
 use App\Models\Equipment;
 use App\Models\Enterprise;
 use App\Models\Collaborator;
@@ -16,22 +17,20 @@ class CollaboratorController extends Controller
 
     public function index(){
 
+        $equipments    = Equipment::all();
         $collaborators = Collaborator::all();
 
-        return view('collaborator/index', compact('collaborators'));
+        return view('collaborator/index', compact('collaborators','equipments'));
     }
 
     public function create(){
 
-        $collaborators = Collaborator::all();
+
         $enterprises   = Enterprise::all();
-        $equipment     = Equipment::all();
         $locations     = Location::all();
-        $accounts      = Account::all();
         $rols          = Rol::all();
 
-        $collaborator = new Collaborator();
-        return view('collaborator/create', compact('collaborators','enterprises','equipment','locations','accounts','rols'));
+        return view('collaborator/create', compact('enterprises','locations','rols'));
     }
 
     public function store (Request $request)
@@ -42,44 +41,71 @@ class CollaboratorController extends Controller
         $collaborator->nombre             = $request->nombre;
         $collaborator->apellido_paterno   = $request->apellido_paterno;
         $collaborator->apellido_materno   = $request->apellido_materno;
-        $collaborator->rol_id             = $request->rol_id;
         $collaborator->email              = $request->email;
+
+        $collaborator->rol_id             = $request->rol_id;
         $collaborator->enterprise_id      = $request->enterprise_id;
         $collaborator->location_id        = $request->location_id;
-        $collaborator->nodo               = 0;
-        $collaborator->ip                 = 0;
-        $collaborator->vpn                = 0;
-        $collaborator->internet           = 0;
-        $collaborator->account_gitlab     = 0;
-        $collaborator->account_glpi       = 0;
-        $collaborator->account_jira       = 0;
-        $collaborator->account_da         = 0;
+        $collaborator->equipment_id       = $request->equipment_id;
+
+        $collaborator->nodo               = $request->nodo;
+        $collaborator->ip                 = $request->ip;
+        $collaborator->vpn                = $request->vpn;
+        $collaborator->internet           = $request->internet;
+
+        $collaborator->account_gitlab     = $request->account_gitlab;
+        $collaborator->account_glpi       = $request->account_glpi;
+        $collaborator->account_jira       = $request->account_jira;
+        $collaborator->account_da         = $request->account_da;
 
         $collaborator->save();
 
-        $collaborators = Collaborator::all();
-        $enterprises   = Enterprise::all();
-        $equipment     = Equipment::all();
-        $locations     = Location::all();
-        $accounts      = Account::all();
-        $rols          = Rol::all();
+        $id = $collaborator->id;
 
-        return view('collaborator/index', compact('collaborators','enterprises','equipment','locations','accounts','rols'));
+        $equipments    = Equipment::all();
+        $collaborator  = Collaborator::find($id);
+        $petitions     = Petition::where('collaborator_id', $id)->get(['id', 'fileID', 'created_at', 'status']);
+
+        return view('collaborator/show', compact('collaborator', 'equipments', 'petitions'));
 
     }
 
     public function show($id)
     {
-        $accounts      = Account::all();
-        $enterprises   = Enterprise::all();
-        $equipment     = Equipment::all();
-        $locations     = Location::all();
-        $rols          = Rol::all();
-        $services      = Service::all();
+        $equipments    = Equipment::all();
+        $collaborator  = Collaborator::find($id);
+        $petitions     = Petition::where('collaborator_id', $id)->get(['id','fileID', 'created_at','status']);
 
-        $collaborator = Collaborator::find($id);
+        return view('collaborator/show', compact('collaborator', 'equipments','petitions'));
+    }
 
-        return view('collaborator/show', compact('collaborator'));
+    public function update(Request $request, $id){
+
+
+        $petitions = Petition::find($id);
+        $equipments = Equipment::find($id);
+        $collaborator = Collaborator::findOrFail($id);
+
+        $collaborator->nodo     = $request->nodo;
+        $collaborator->ip       = $request->ip;
+        $collaborator->vpn      = $request->vpn;
+        $collaborator->internet = $request->internet;
+
+        $collaborator->account_gitlab = $request->account_gitlab;
+        $collaborator->account_glpi   = $request->account_glpi;
+        $collaborator->account_jira   = $request->account_jira;
+        $collaborator->account_da     = $request->account_da;
+
+        $collaborator->equipment_id  = $request->equipment_id;
+
+        $collaborator->save();
+
+        $equipments    = Equipment::all();
+        $collaborator  = Collaborator::find($id);
+        $petitions     = Petition::all();
+
+        return view('collaborator/show', compact('collaborator', 'equipments', 'petitions'));
+
     }
 
 }

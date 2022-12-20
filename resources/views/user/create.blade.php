@@ -60,7 +60,7 @@
                     <div class="col-md-2"><strong>Empresa:</strong></div>
                     <select class="col-md-4" name="enterprise_id" id="enterprise_id">
                         @foreach ($enterprises as $enterprise)
-                            <option value="{{ $enterprise->id }}" id="enterprise_id">{{ $enterprise->nombre }}</option>
+                            <option value="{{ $enterprise->id }}" id="enterprise_id">{{ $enterprise->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -68,7 +68,11 @@
                 <div class="row">
                     <div class="col-md-6"></div>
                     <div class="col-md-2"><strong>Puesto:</strong></div>
-                    <div class="col-md-4"><input type="text" id="position" name="position" required></div>
+                    <select class="col-md-3" name="role_id" id="role_id">
+                        @foreach ($rols as $rol)
+                            <option value="{{ $rol->id }}"> {{ $rol->rol }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <br>
                 <div class="row">

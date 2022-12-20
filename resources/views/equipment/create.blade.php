@@ -3,43 +3,39 @@
 @section('title', 'UTIC')
 
 @section('content_header')
+
+    <div class="container-nav">
+        <div class="row">
+            <div class="col-md-1 p-4"></div>
+            <div class="col-md-9 p-4">
+                <h4><strong>Registro de equipo</strong></h4>
+                <h6>Ciudad de México a <?php echo date('j-m-Y'); ?> </h6>
+            </div>
+            <div class="col-md-2 p-3">
+                <img class="imagen-header" src="{{ URL::asset('img/download.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
     <div class="container">
-            {{-- Bloque de titulo de la solicitud --}}
+        <form action="{{ route('equipment.store') }}" method="POST">
+            @csrf
+
+            <!--Inicio del bloque del equipo-->
             <div class="container">
-                <h4><strong>REGISTRO DE EQUIPO DE COMPUTO EN LA UTIC:</strong></h4>
-                <div class="row">
-                    <div class="col-md-10">
-                        <h5>Ciudad de México a <?php echo date('j-m-Y'); ?> </h5>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="/dashboard"><button type="button" class="btn btn-secondary">Inicio</button></a>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="create"><button type="button" class="btn btn-danger">Registrar</button></a>
-                    </div>
-                </div>
-                <hr class="red">
+                <h4>Información del equipo a asignar y/o registrar:</h4>
             </div>
             <br>
-
             <div class="container">
-                <form action="{{route('equipment.store')}}" method="POST">
-                    @csrf
-
-                    <!--Inicio del bloque del equipo-->
-                    <div class="container">
-                        <h4>Información del equipo a asignar y/o registrar:</h4>
-                    </div>
-                    <br>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3"><strong>Tipo del equipo:</strong></div>
-                            <div class="col-md-2">
-                            <select name="tipo" id="tipo" required>
-                                <option value="Laptop" id="Laptop">Laptop</option>
-                                <option value="AllOne" id="AllOne">AllOne</option>
-                                <option value="PC" id="PC">PC</option>
-                            </select>
+                <div class="row">
+                    <div class="col-md-3"><strong>Tipo del equipo:</strong></div>
+                    <div class="col-md-2">
+                        <select name="tipo" id="tipo" required>
+                            <option value="Laptop" id="Laptop">Laptop</option>
+                            <option value="AllOne" id="AllOne">AllOne</option>
+                            <option value="PC" id="PC">PC</option>
+                        </select>
                     </div>
                 </div>
                 <br>

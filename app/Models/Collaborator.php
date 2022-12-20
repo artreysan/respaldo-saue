@@ -53,15 +53,4 @@ class Collaborator extends Model
         return $this->belongsTo(Equipment::class,'equipment_id');
     }
 
-    public function account()
-    {
-        return $this->belongsTo(Account::class,'account_id');
-    }
-
-    public function service()
-    {
-        return $this->belongsTo(Service::class,'service_id');
-    }
-
-
 }

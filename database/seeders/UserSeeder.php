@@ -22,11 +22,11 @@ class UserSeeder extends Seeder
             'apellido_materno' => 'Hernández',
             'email' => 'milton.quiroz@bluelife.network',
             'password' => Hash::make('qwe123...'),
-            'position' => 'President',
+            'rol_id' => '1',
             'location_id' => '1',
             'enterprise_id' => '2',
             'role_id' => '1'
         ]);
-        
+
     }
 }

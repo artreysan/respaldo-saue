@@ -41,9 +41,18 @@ Route::resource('collaborator', CollaboratorController::class); // Esta ruta sus
 
 //Rutas para las peticiones
 Route::resource('petition', PetitionController::class);
-Route::get('petition', [PetitionController::class,'all']); // Esta ruta sustituye varias lineas haciendo un CRUD, para mayor informacion revisar la documentacion
+
+Route::get('petition/pendiente', [PetitionController::class, 'pendiente']); //Muestra las peticiones pendientes
+Route::get('petition/en-proceso', [PetitionController::class, 'en-proceso']); //Muestra solo las peticiones en proceso
+Route::get('petition/atendida', [PetitionController::class, 'atendida']); //Muestra solo las peticiones atendidas
+Route::get('petition/validada', [PetitionController::class, 'validada']); //Muestra solo las peticiones validadas
+
+Route::get('petition', [PetitionController::class,'all']); // Esta ruta muestr tdas las peticiones del usuario despues de hacer una solicitud
+
 Route::get('petition/{petition}', [PetitionController::class,'showPetition']);
 Route::resource('collaborator/petition', PetitionController::class); // Esta ruta sustituye varias lineas haciendo un CRUD, para mayor informacion revisar la documentacion
+
+
 
 //Rutas para  usuarios
 Route::resource('user', UserController::class);
@@ -53,9 +62,6 @@ Route::resource('user', UserController::class);
 
 //Rutas para ver los proyectos
 Route::get('project/index',[ProjectController::class,'show']); //Mostrar todos los proyectos activos
-
-//Rutas para ver las cuentas de acceso
-Route::get('/accounts/home',[AccountController::class,'index']); //Mostrar todos las cuentas de acceso
 
 //Rutas para las empresas
 Route::resource('enterprise', EnterpriseController::class); // Esta ruta sustituye varias lineas haciendo un CRUD, para mayor informacion revisar la documentacion

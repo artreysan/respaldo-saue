@@ -7,8 +7,8 @@
         <div class="row">
             <div class="col-md-1 p-4"></div>
             <div class="col-md-9 p-4">
-                <h4><strong>Solicitudes</strong></h4>
-                <h6>Ciudad de México a <?php echo date('j-m-Y'); ?> </h6>
+                <h3><strong>Todas las solicitudes pendientes:</strong></h3>
+                <h5>Ciudad de México a <?php echo date('j-m-Y'); ?> </h5>
             </div>
             <div class="col-md-2 p-3">
                 <img class="imagen-header" src="{{ URL::asset('img/download.png') }}" alt="">
@@ -16,9 +16,12 @@
         </div>
     </div>
     <br>
+    <div class="container">
+        <p> Aqui van a ir cuadros estadisticos de las solicitudes </p>
+    </div>
     <br>
     <div class="container">
-        <table class="table table-bordered">
+        <table class="table">
             <thead class="table-secondary">
                 <th>Folio</th>
                 <th>Empresa</th>
@@ -51,7 +54,7 @@
                         }
                         ?>
                     </td>
-                    <td><a href="/petition/{{ $petition->id }}" alt="Perfil" class="col-md-1 fas fa-eye"></a></td>
+                    <td><a href="/petition/{{ $petition->id }}" alt="ver" class="col-md-1 fas fa-eye"></a></td>
                 </tbody>
             @endforeach
         </table>

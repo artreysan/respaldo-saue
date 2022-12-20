@@ -19,17 +19,19 @@ return new class extends Migration
             $table->char('apellido_paterno', 150);
             $table->char('apellido_materno', 150)->nullable();
             $table->string('email')->unique();
-            $table->string('nodo')->nullable();
 
-            $table->boolean('internet');
-            $table->boolean('ip');
-            $table->boolean('vpn');
+            //informacion de los servicios
+            $table->char('nodo',10)->nullable();
 
-            $table->boolean('account_gitlab');
-            $table->boolean('account_glpi');
-            $table->boolean('account_jira');
+            $table->boolean('internet')->nullable();
+            $table->ipAddress('ip')->nullable();
+            $table->boolean('vpn')->nullable();
 
-            $table->boolean('account_da');
+            //informacion de las cuentas de acceso
+            $table->char('account_gitlab', 50)->nullable();
+            $table->char('account_jira', 50)->nullable();
+            $table->char('account_glpi', 50)->nullable();
+            $table->char('account_da', 50)->nullable();
 
             //Llaves foraneas
             $table->unsignedBigInteger('location_id');
@@ -42,7 +44,9 @@ return new class extends Migration
             $table->unsignedBigInteger('rol_id');
             $table->foreign('rol_id')->references('id')->on('rols');
 
-            $table->unsignedBigInteger('equipment_id')->nullable();
+            $table->unsignedBigInteger('equipment_id')
+                  ->nullable()
+                  ->unique();
             $table->foreign('equipment_id')
                   ->references('id')
                   ->on('equipment')
