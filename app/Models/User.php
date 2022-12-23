@@ -31,11 +31,8 @@ class User extends Authenticatable
         'apellido_paterno',
         'apellido_materno',
         'email',
+        'position',
         'password',
-        'role_id',
-        'enterprise_id',
-        'location_id',
-
     ];
 
     /**

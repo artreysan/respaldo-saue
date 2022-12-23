@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Rol;
 use App\Models\Account;
-use App\Models\Service;
 use App\Models\Location;
 use App\Models\Petition;
 use App\Models\Equipment;
@@ -19,6 +18,11 @@ class CollaboratorController extends Controller
 
         $equipments    = Equipment::all();
         $collaborators = Collaborator::all();
+        $enterprises   = Enterprise::all();
+        $equipment     = Equipment::all();
+        $locations     = Location::all();
+        $accounts      = Account::all();
+        $rols          = Rol::all();
 
         return view('collaborator/index', compact('collaborators','equipments'));
     }
@@ -33,7 +37,7 @@ class CollaboratorController extends Controller
         return view('collaborator/create', compact('enterprises','locations','rols'));
     }
 
-    public function store (Request $request)
+    public function create (Request $request)
     {
 
         $collaborator = new Collaborator();

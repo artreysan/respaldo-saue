@@ -13,57 +13,63 @@ class Petition extends Model
     use HasFactory;
 
     protected $fillable = [
+        'authorizer_id',
         'collaborator_id',
         'fileID',
         'user_id',
         'equipment_id',
         'enterprise_id',
-        'nodo',
         'internet',
-        'ip',
+        'ip_fija',
         'vpn',
-        'status',
-        'account_gitlab',
-        'account_jira',
-        'account_glpi',
-        'account_da',
-        'tk_glpi_account_1',
-        'tk_gitlab_account_1',
-        'tk_jira_account_1',
-        'tk_da_account_1',
-        'tk_glpi_account_0',
-        'tk_gitlab_account_0',
-        'tk_jira_account_0',
-        'tk_da_account_0',
-        'tk_nodo_1',
-        'tk_internet_1',
-        'tk_ip_1',
-        'tk_vpn_1',
-        'tk_nodo_0',
-        'tk_internet_0',
-        'tk_ip_0',
-        'tk_vpn_0',
-        'tk_vpn_0',
+        'cuenta_gitlab',
+        'cuenta_jira',
+        'cuenta_glpi',
+        'cuenta_da',
+        'tipo',
+        'marca',
+        'modelo',
+        'serie',
+        'mac_ethernet',
+        'mac_wifi',
+        'propietario',
     ];
 
-    public function collaborator()
+    public function authorizers()
     {
-        return $this->belongsTo(Collaborator::class,  'collaborator_id');
+        return $this->belongsToMany(Authorizer::class);
     }
 
+<<<<<<< HEAD
     public function equipment()
     {
         return $this->belongsTo(Equipment::class,  'equipment_id');
     }
 
     public function user()
+=======
+    public function collaborators()
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
     {
-        return $this->hasMany(User::class, 'user_id');
+        return $this->belongsToMany(Collaborator::class);
     }
 
-    public function service()
+    public function users()
     {
-        return $this->hasMany(Service::class,'service_id');
+        return $this->belongsToMany(User::class);
     }
 
+<<<<<<< HEAD
+=======
+    public function enterprises()
+    {
+        return $this->belongsToMany(Enterprise::class);
+    }
+
+    public function equipment()
+    {
+        return $this->belongsToMany(Equipment::class);
+    }
+
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
 }

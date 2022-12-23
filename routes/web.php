@@ -1,16 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\AccountController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\PetitionController;
-use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\AuthorizerController;
-use App\Http\Controllers\EnterpriseController;
 use App\Http\Controllers\CollaboratorController;
-use App\Http\Controllers\TicketController;
+use App\Http\Controllers\EnterpriseController;
+use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\PetitionController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RequestController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,10 +56,18 @@ Route::resource('collaborator/petition', PetitionController::class); // Esta rut
 Route::resource('user', UserController::class);
 
 //Rutas para ver los autorizadores
-//Route::get('authorizer/index',[AuthorizerController::class,'show']); //Mostrar todos los autorizadores registrados (pentiende por usar 11-11)
+Route::get('/authorizers/home',[AuthorizerController::class,'show']); //Mostrar todos los autorizadores registrados
 
-//Rutas para ver los proyectos
-Route::get('project/index',[ProjectController::class,'show']); //Mostrar todos los proyectos activos
+//Rutas para ver los autorizadores
+Route::get('/projects/home',[ProjectController::class,'show']); //Mostrar todos los proyectos activos
 
 //Rutas para las empresas
-Route::resource('enterprise', EnterpriseController::class); // Esta ruta sustituye varias lineas haciendo un CRUD, para mayor informacion revisar la documentacion
+Route::get('/enterprises/home',     [EnterpriseController::class,'index']);    //Mostrar todos las empresas
+Route::get('/enterprises/register', [EnterpriseController::class,'register']); // Mostrar formularios de empresas
+Route::post('/enterprises/register',[EnterpriseController::class,'create']);   // Almacenar formuario de empresas
+
+//Rutas para las solicitudes
+Route::get('/petition/home',     [PetitionController::class,'index']);    // Mostrar todos las solicitudes
+Route::get('/petition/register', [PetitionController::class,'register']); // Mostrar formularios de solicitudes
+Route::post('/petition/register',[PetitionController::class,'create']);   // Almacenar formuario de solicitudes
+

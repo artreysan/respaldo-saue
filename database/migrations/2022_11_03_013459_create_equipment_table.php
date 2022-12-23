@@ -20,14 +20,13 @@ return new class extends Migration
             $table->char('modelo', 20);
             $table->ipAddress('serie', 20);
             $table->macAddress('mac_ethernet', 20);
-            $table->macAddress('mac_wifi')->nullable();
+            $table->macAddress('mac_wifi');
+            $table->char('propietario', 50);
 
             $table->unsignedBigInteger('enterprise_id')->nullable();
             $table->foreign('enterprise_id')
                   ->references('id')
                   ->on('enterprises');
-
-
         });
     }
 

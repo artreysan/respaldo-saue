@@ -153,7 +153,7 @@ return [
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => true,
     'layout_fixed_footer' => true,
-    'layout_dark_mode' => null,
+    'layout_dark_mode' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -185,6 +185,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
     |
     */
+
     'classes_body' => '',
     'classes_brand' => '',
     'classes_brand_text' => '',
@@ -320,7 +321,7 @@ return [
         ['header' => 'Bitácora'],
         [
             'text' => 'Usuarios',
-            'url'  => 'user',
+            'url'  => 'admin/users/index',
             'icon' => 'fas fa fa-user',
         ],
         [
@@ -331,129 +332,17 @@ return [
         [
             'text'    => 'Colaboradores',
             'icon'    => 'fas fa-users',
-            'submenu' => [
-                [
-                    // 'text'    => 'Roles',
-                    // 'url'     => 'rol/home',
-                    // 'icon' => 'fas fa-fw fa-user',
-                    // 'submenu' => [
-                    //         [
-                    //             'text' => 'Analista de Software',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Arquitecto de Base de Datos',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Administrador del Servicio',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Administrador de Proyectos',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Controller Manager',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Desarrollador Cliente-Servidor',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Desarrollador Web',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Desarrollador Móvil',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Documentador',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Ingeniero de pruebas',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Lider de proyecto',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Especialista en Metodología COSMIC',
-                    //             'url'  => '#',
-                    //         ],
-                    //         [
-                    //             'text' => 'Especialista en Seguridad Informática',
-                    //             'url'  => '#',
-                    //         ],
-                    //     ],
-                ],
                 [
                     'text' => 'Nuevo',
-                    'url'  => 'collaborator/create',
+                    'url'  => '/collaborators/register',
                     'icon_color' => 'white',
                     'icon' => 'fas fa-plus',
                 ],
                 [
                     'text' => 'Ver todos',
-                    'url'  => 'collaborator',
+                    'url'  => '/collaborators/home',
                     'icon' => 'far fa-eye',
                 ],
-                // [
-                //     'text' => 'en proyectos',
-                //     'url'  => '#',
-                //     'icon' => 'fas fa-share-alt	',
-                //     'submenu' => [
-                //         [
-                //             'text'    => 'de GLPI',
-                //             'url'     => '#',
-                //             'submenu' => [
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-
-                //             ],
-                //         ],
-                //         [
-                //             'text'    => 'de GITLAB',
-                //             'url'     => '#',
-                //             'submenu' => [
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-
-                //             ],
-                //         ],
-                //         [
-                //             'text'    => 'de JIRA',
-                //             'url'     => '#',
-                //             'submenu' => [
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-
-                //             ],
-                //         ],
-                //     ],
-                // ],
             ],
         ],
         [
@@ -462,7 +351,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Ver todos',
-                    'url'  => 'project/index',
+                    'url'  => 'projects/home',
                     'icon' => 'far fa-eye',
                 ],
             ],
@@ -473,13 +362,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Registrar nuevo equipo',
-                    'url'  => 'equipment/create',
+                    'url'  => 'equipment/register',
                     'icon_color' => 'white',
                     'icon' => 'fas fa-plus',
                 ],
                 [
                     'text' => 'Ver todos',
-                    'url'  => 'equipment',
+                    'url'  => 'equipment/home',
                     'icon' => 'far fa-eye',
                 ],
             ],
@@ -490,18 +379,17 @@ return [
             'submenu' => [
                 [
                     'text' => 'Registrar nueva empresa',
-                    'url'  => 'enterprise/create',
+                    'url'  => 'enterprises/register',
                     'icon_color' => 'white',
                     'icon' => 'fas fa-plus',
                 ],
                 [
                     'text' => 'Ver todas',
-                    'url'  => 'enterprise',
+                    'url'  => 'enterprises/home',
                     'icon' => 'far fa-eye',
                 ],
             ]
         ],
-    ],
 
     /*
     |--------------------------------------------------------------------------

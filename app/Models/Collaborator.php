@@ -16,20 +16,13 @@ class Collaborator extends Model
         'apellido_paterno',
         'apellido_materno',
         'email',
-        'nodo',
-        'internet',
-        'ip',
-        'vpn',
-        'account_gitlab',
-        'account_glpi',
-        'account_jira',
-        'account_da',
         'location_id',
         'rol_id',
         'equipment_id',
         'enterprise_id',
     ];
 
+<<<<<<< HEAD
 
     //Llaves foraneas
 
@@ -52,5 +45,17 @@ class Collaborator extends Model
     {
         return $this->belongsTo(Equipment::class,'equipment_id');
     }
+=======
+    public function locations()
+    {
+        return $this->belongsToMany(Location::class);
+    }
+
+    public function rols()
+    {
+        return $this->belongsToMany(Rol::class);
+    }
+
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
 
 }

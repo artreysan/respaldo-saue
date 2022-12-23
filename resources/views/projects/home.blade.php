@@ -3,6 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+<<<<<<< HEAD
 <div class="container-nav">
     <div class="row">
         <div class="col-md-1 p-4"></div>
@@ -16,18 +17,32 @@
     </div>
 </div>
     <br>
+=======
+
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
     <div class="container">
-        <div class="row">
-            <div class="col-md-11"></div>
-            <div class="col-md-1">
-                <a href="/dashboard"><button type="button" class="btn btn-secondary">Inicio</button></a>
+        {{-- Bloque de titulo de la solicitud --}}
+        <div class="container">
+            <h4><strong>PROYECTOS: </strong></h4>
+            <div class="row">
+                <div class="col-md-10">
+                    <h5>Ciudad de México a <?php echo date('j-m-Y'); ?> </h5>
+                </div>
+                <div class="col-md-1">
+                    <a href="/dashboard"><button type="button" class="btn btn-secondary">Inicio</button></a>
+                </div>
             </div>
+            <hr class="red">
         </div>
     </div>
     <br>
     <div class="container">
         <table class="table">
+<<<<<<< HEAD
             <thead class="table-secondary">
+=======
+            <thead class="table-dark">
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
                 <th>Id</th>
                 <th>Nombre largo</th>
                 <th>Nombre corto</th>
@@ -36,23 +51,11 @@
             @foreach ($projects as $project)
                 <tbody>
                     <td>{{ $project->id }}</td>
-                    <td>{{ $project->nombre_completo }}</td>
-                    <td>{{ $project->nombre_corto }}</td>
-                    <td class="col-md-4">{{ $project->coordinador }}</td>
+                    <td>{{ $project->nombre_completo}}</td>
+                    <td>{{ $project->nombre_corto}}</td>
+                    <td class="col-md-4">{{ $project->coordinador}}</td>
                 </tbody>
             @endforeach
         </table>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <footer>
-            ©
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            Desarrollado en CDMX,<strong> UTIC </strong>
-        </footer>
     </div>
 @stop

@@ -4,27 +4,29 @@ namespace App\Http\Controllers;
 
 use App\Models\Equipment;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Http\Controllers\View;
 use App\Http\Controllers\Controller;
 use App\Models\Collaborator;
 use Illuminate\Support\Facades\Redirect;
+=======
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
 
 class EquipmentController extends Controller
 {
 
     public function index(){
         $equipments = Equipment::all();
-        return view('equipment/index', compact('equipments'));
+        return view('equipment.home', compact('equipments'));
     }
 
-    public function create(){
+    public function register()
+    {
 
-        $equipment = new Equipment();
-        return view('equipment/create');
+        return view('equipment.register');
     }
 
-
-    public function store (Request $request)
+    public function create (Request $request)
     {
 
         $equipment = new Equipment();
@@ -39,9 +41,7 @@ class EquipmentController extends Controller
 
         $equipment->save();
 
-        $equipments = Equipment::all();
-
-        return view('equipment/index', compact('equipments'));
+        return view('/equipment/register');
     }
 
     public function update(Request $request, $id)

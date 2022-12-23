@@ -1,13 +1,73 @@
 
--- #Authorizers#
--- INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. Mario César Herrera González','Director Coordinador de Innovación y Desarrollo Tecnológico');
--- INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. José Antonio Rulfo Zaragoza','Director de Desarrollo Tecnológico');
--- INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Mtra. Edna Patricia Santiago Vargas','Subdirectora de Sistemas Administrativos');
--- INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. David de León Muñoz','Subdirector de Innovación Tecnológica');
--- INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. Iracema Mirón Ramírez','Subdirectora de Adminsitración de Portales');
+#Accounts#
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, NULL, NULL, NULL, 'utic.fsta.admcntr');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'daniela.cisneros', 'daniela.cisneros', 'daniela.cisneros', 'utic.fsta.admsrv');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'rene.nino', 'rene.nino', 'rene.nino', 'utic.fsta.crdmssrv');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'miguel.acosta', 'miguel.acosta', NULL, 'utic.fsta.admpryc');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'cimar.martinez', 'cimar.martinez', NULL, 'utic.fsta.arqsftw');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'laura.fernandez', 'laura.fernandez', NULL, 'utic.fsta.arqbd');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'jorge.arango', 'jorge.arango', NULL, 'utic.fsta.arqbd02');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'joaquin.avila', 'joaquin.avila', NULL, 'utic.fsta.seg');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'elia.aguilar', 'elia.aguilar', NULL, 'utic.fsta.prbs');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'bentura.cabanas', 'bentura.cabanas', 'bentura.cabanas', 'utic.fsta.anlst');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'israel.noriega', 'israel.noriega', 'israel.noriega', 'utic.fsta.anlst02');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'samuel.sandoval', NULL, 'samuel.sandoval', 'utic.fsta.anlst03');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'dolores.garcia', 'dolores.garcia', NULL, 'utic.fsta.anlst04');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'angelica.hernandez', 'angelica.hernandez', NULL, 'utic.fsta.arqbd05');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'edgar.morales', 'edgar.morales', NULL, 'utic.fsta.arqbd06');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'jose.martinez', 'jose.martinez', NULL, 'utic.fsta.arqbd07');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'pablo.sanchez', 'pablo.sanchez', NULL, 'utic.fsta.doc');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'antonio.montes', 'antonio.montes', 'antonio.montes', 'utic.fsta.doc02');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'saheli.guerrero', 'saheli.guerrero', NULL, 'utic.fsta.doc03');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'juan.iglecias', 'juan.iglecias', NULL, 'utic.fsta.doc04');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'rodrigo.severo', 'rodrigo.severo', NULL, 'utic.fsta.doc05');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'diana.dorantes', 'diana.dorantes', NULL, 'utic.fsta.dsndx');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'erica.parra','erica.parra','erica.parra','utic.fsta.apy');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'antonio.rodriguez','antonio.rodriguez', NULL, 'utic.fsta.scrmm01');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'carlos.martinez','carlos.martinez', NULL,'utic.fsta.scrmm02');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'xitlaly.ireta','xitlaly.ireta', NULL, 'utic.fsta.scrmm03');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'astrid.alpizar','astrid.alpizar', NULL,'utic.fsta.scrmm04');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'alejandro.serrano','alejandro.serrano', NULL ,'utic.fsta.scrmm05');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'aaron.hernandez','aaron.hernandez', NULL,'utic.fsta.scrmm06');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, NULL , NULL, NULL,'utic.fsta.scrmm07');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'juan.duran','juan.duran', 'juan.duran','utic.fsta.dsrrw01');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'ignacio.palos','ignacio.palos', 'ignacio.palos','utic.fsta.dsrrw02');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'oscar.estrada','oscar.estrada', NULL ,'utic.fsta.dsrrw03');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'misael.mendoza','misael.mendoza','misael.mendoza','utic.fsta.dsrrw04');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'cesar.martinez','cesar.martinez','cesar.martinez','utic.fsta.dsrrw05');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'enrique.beltran','enrique.beltran' ,NULL ,'utic.fsta.dsrrw06');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'sergio.ramos','ergio.ramos', NULL, 'utic.fsta.dsrrw07');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'marco.aguila','marco.aguila', NULL,'utic.fsta.dsrrw08');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'andres.tapia','andres.tapia', NULL,'utic.fsta.dsrrw09');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'andreyev.lopez','andreyev.lopez', NULL,'utic.fsta.dsrrw10');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'luis.rojas','luis.rojas', NULL ,'utic.fsta.dsrrw11');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'gilberto.amaro','gilberto.amaro', NULL ,'utic.fsta.dsrrw12');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'alondra.ortiz','alondra.ortiz','alondra.ortiz','utic.fsta.dsrrw13');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'jaffet.gonzalez','jaffet.gonzalez', NULL,'utic.fsta.dsrrw14');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'oscar.moreno','oscar.moreno', NULL,'utic.fsta.dsrrw15');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'sergio.perez','sergio.perez', NULL,'utic.fsta.dsrrw16');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'nazario.gonzalez','nazario.gonzalez', NULL ,'utic.fsta.dsrrw17');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL,  NULL , NULL, NULL, 'utic.fsta.dsrrw18');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'meshly.nava','meshly.nava', NULL ,'utic.fsta.dsrrw19');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'miguel.roman','miguel.roman', NULL ,'utic.fsta.dsrrw20');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'jose.mancera','jose.mancera','jose.mancera','utic.fsta.dsrrcs01');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'ernesto.gonzalez','ernesto.gonzalez','ernesto.gonzalez','utic.fsta.dsrrcs02');
+INSERT INTO `accounts`(`id`, `cuenta_gitlab`, `cuenta_jira`, `cuenta_glpi`, `cuenta_da`) VALUES (NULL, 'adrian.hernandez','adrian.hernandez', NULL,'utic.fsta.dsrrmv01');
+
+#Authorizers#
+INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. Mario César Herrera González','Director Coordinador de Innovación y Desarrollo Tecnológico');
+INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. José Antonio Rulfo Zaragoza','Director de Desarrollo Tecnológico');
+INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Mtra. Edna Patricia Santiago Vargas','Subdirectora de Sistemas Administrativos');
+INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. David de León Muñoz','Subdirector de Innovación Tecnológica');
+INSERT INTO `authorizers`(`id`, `nombre`, `puesto`) VALUES (NULL,'Ing. Iracema Mirón Ramírez','Subdirectora de Adminsitración de Portales');
+
+
+
 #Enterprises#
-INSERT INTO `enterprises`(`id`, `name`, `contract`) VALUES (NULL,'Tecnología Aplicada a Negocios S.A de C.V','713-UTIC-LPN-001-22');
-INSERT INTO `enterprises`(`id`, `name`, `contract`) VALUES (NULL,'SecretarÍa de Infraestructura, Comunicaciones y Transportes','UTIC');
+INSERT INTO `enterprises`(`id`, `nombre`, `contrato`) VALUES (NULL,'Patito S.A. de C.V','BBC-3789');
+INSERT INTO `enterprises`(`id`, `nombre`, `contrato`) VALUES (NULL,'Electronica Sacachispas S.A de C.V','MVC-4589');
+INSERT INTO `enterprises`(`id`, `nombre`, `contrato`) VALUES (NULL,'Techno Aplicada S.A de C.V','IUYVC-4584329');
 
 #Levels#
 INSERT INTO `levels`(`id`, `tipo`) VALUES (NULL,'Escritura');
@@ -16,6 +76,7 @@ INSERT INTO `levels`(`id`, `tipo`) VALUES (NULL,'Escritura y Lectura');
 
 
 #Locations#
+INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Remoto',NULL);
 INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurgentes Sur 1089, Col. Nochebuena, Benito Juárez, 3720, CDMX,  UTIC Piso 9, Cubiculo 1','1');
 INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurgentes Sur 1089, Col. Nochebuena, Benito Juárez, 3720, CDMX,  UTIC Piso 9, Cubiculo 2','2');
 INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurgentes Sur 1089, Col. Nochebuena, Benito Juárez, 3720, CDMX,  UTIC Piso 9, Cubiculo 3','3');
@@ -31,7 +92,6 @@ INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurge
 INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurgentes Sur 1089, Col. Nochebuena, Benito Juárez, 3720, CDMX,  UTIC Piso 9, Cubiculo 13','13');
 INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurgentes Sur 1089, Col. Nochebuena, Benito Juárez, 3720, CDMX,  UTIC Piso 9, Cubiculo 14','14');
 INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Av. Insurgentes Sur 1089, Col. Nochebuena, Benito Juárez, 3720, CDMX,  UTIC Piso 9, Cubiculo 15','15');
-INSERT INTO `locations`(`id`, `ubicacion`, `cubiculo`) VALUES (NULL,'Remoto',NULL);
 
 #Projects#
 INSERT INTO `projects`(`id`, `nombre_completo`, `nombre_corto`, `coordinador`) VALUES (NULL,'Consulta licencias','e_Licencias DGAF','Ing. Betzalel Betanzos Laiseca');
@@ -68,14 +128,11 @@ INSERT INTO `projects`(`id`, `nombre_completo`, `nombre_corto`, `coordinador`) V
 INSERT INTO `projects`(`id`, `nombre_completo`, `nombre_corto`, `coordinador`) VALUES (NULL,'Timbrado Facturación','Timbrado FAC','Ing. Iracema Mirón Ramírez');
 
 #Rol#
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Administrador de Contrato');
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Administrador del Servicio');
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Administrador de Proyectos');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Analista de Software');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Arquitecto de Base de Datos');
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Arquitecto de Software');
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Controller Manager (Persoanl de apoyo)');
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Coordinador de la mesa de servicio');
+INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Administrador del Servicio');
+INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Administrador de Proyectos');
+INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Controller Manager');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Desarrollador Cliente-Servidor');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Desarrollador Web');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Desarrollador Móvil');
@@ -83,178 +140,9 @@ INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Documentador');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Ingeniero de pruebas');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Lider de proyecto');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Scrum Master');
-INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'UI/UX');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Especialista en Metodología COSMIC');
 INSERT INTO `rols`(`id`, `rol`) VALUES (NULL, 'Especialista en Seguridad Informática');
 
-#Equipment#
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','EliteBook 840 G6','5CGOl96SBl','B05C:DAE3:37F0','14F6:D845:CB30','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','FRQDNV2','C8F7:5066:F58D','04EA:56A6:F8C4','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4RQZ8V1','5CF9:DDDC:FA22','0009:0FFE:0001','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Sin Equipo','Sin Equipo','Sin Equipo','00000000','0000:0000:0000','0000:00000:0000','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Lenovo','80K4','MP12XHUL','1C39:47B4:1697','76DF:BF36:8DCF', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','EliteBook 840 G6','5CG0198XKB','00FF:A2BD:BC2E','14F6:D82D:B038', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4RWR8V1','5CF9:DDDD:1F8F','54EE:88D6:A302','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 5400','SGXV433','C03E:BA4F:0C7A','3C58:C2E9:C6AF', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Lenovo','Z40-70','YB12565611','52-7B-9D-65-5B-21','AC-D1-B8-FE-01-7B','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Lenovo','80K4','MP147QY1','1C39:47DC:149F','76DF:BF60:0D3D', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','6P7C8S2','C8F7:5010:B0E0','DC8B:285F:28E2', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','l7-BY4097NR','TJ27325SWJ','l4-CB-l9-BF-F8-C2','l4-l8-C3-6E-22-3D', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro 3400','8ZV08K3','B4-45-06-7B-32-AC','AA-93-4A-62-39-D3', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','17-BY4097NR','TJ21456F4D','48-9E-BD-21-02-55','80-45-DD-A5-6F-69','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Inspiron 15','34C65F2','00-09-0F-FE-00-01','10-7D-1A-02-F4-A2', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Lenovo','ThinkPad','PF-2TQ2RW','84-5C-F3-FC-A1-CE','84-5C-F3-FC-A1-CA', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 5490','5LJ4PQ2','10-65-30-81-04-2E','76-40-BB-3D-10-AB','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4SP09Vl','SCF9:D0DD:1F30','54CE:29A4:8601','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4PGR8Vl','C81F:66AF:SA51','8086:F2D0:3FBD','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Acer','Aspire E5-551','NXMUCAL005543092623400','F8-76-1C-CF-3C-66','1A-86-87-35-5C-DF','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Lenovo','20AWA13HLM','PC06DYP3','68F7:28AF:6424','104A:7D1E:49E9', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','CJKPNQ2','65-30-7D-20-9D','C0-B6-F9-D5-9A-68', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4RJZ8V1','5CF9:DDDC:E6-0E', NULL,'1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Lenovo','T440p','PC0DW7PT','50-7B-9D-DD-90-D2', '90-2E-lC-46-B8-7E','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Acer','Aspire E 15','NXGDNAL0026180B3797600','54AB:3A7F:F9A6', '6A14:017C:AF6F','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro 3400','FRWF7K3','B445:067B:310A', 'A893:4A62:3523','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro','F10H7K3','B4-45-06-7A-F8-6C', 'A8-93-4A-62-17-6B','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','17-BY4097NR','TJ21325SY5','00-15-5D-4C-50-37', 'E8-84-A5-CA-22-8B','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','17-Cn0053CL','316HBUARABA','00-FF-A6-5B-9C-90', '5E-61-99-5A-86-61','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 5490','G4RHLQ2','E4-B9-7A-32-D7-05', 'D8-9C-67-4D-DE-AF', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 5490','G4RHLQ2','E4-B9-7A-32-D7-05', '18-1D-EA-E0-25-C7','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','45MX8V1','5CF9:DDDD:1DE9','5408:EB3A:7E01','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Acer','Aspire E 15','NXGDNAL002619053767600','00e4:4c68:1185','6814:017C:C5D5','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro 3400','CH028K3','B445:067A:F8FB','A893:4A62:381B','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','4FM9HR2','00FF:5C76:7F7D','B469:2175:0C74','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro','FCTG7K3','B445:067B:2BBA','A893:4A62:2CE1','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','B7HB8S2','1C-1B-B5-D2-C4-E0','CA-FF-28-59-37-CB','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7480','BJWB6H2','10-65-30-1E-82-3A','F8-59-71-4C-F6-5E','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro 3400','5L028K3','B4-45-06-7B-2F-6E','A8-93-4A-62-34-91','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7480','1SSTRF2','8C-EC-4B-DE-A3-9B','00-28-F8-19-84-18','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Levono','Thinkpad T90','PFIZLJF3','F8-75-A4-08-50-3C','94-E6-F7-4B-9C-8B','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7480','C8DK4H2','D4-81-D7-E4-22-E1','F8-59-71-04-A0-AC','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','HYGZHR2','E4-B9-7A-4E-B3-2D','B4-69-21-74-6B-3F','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','77VJHR2','E4-B9-7A-47-FA-32','B4-69-21-74-00-A4','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Optiplex 9010','4RLR8V1','5C-F9-DD-DD-29-E4','00-15-5D-14-GA-D7','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','34B3MQ2','E4-B9-7A-32-BE-67','64-5D-86-BE-1F-D6','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','17-Cn0053CL','316HBUARABA','00-FF-A6-5B-9C-90','5E-61-99-5A-86-61','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Latitude 7490','4M2CHR2','E4-B9-7A-4C-80-11','B4-69-21-75-1B-F1','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Sin Equipo','Sin Equipo','Sin Equipo','00000000','0000:0000:0000','0000:00000:0000', '1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','HP','17-BY4097NR','TJ220971V2','30-24-A9-A5-13-36','D8-F8-83-05-E1-83','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Sin Equipo','Sin Equipo','Sin Equipo','00000000','0000:0000:0000','0000:00000:0000','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4RHY8V1','5CF9:DDDD:29D4','54SA:0930:3301','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'Laptop','Dell','Vostro 3400','24W08K3','B445:067B:2D81','A893:4A62:39C3','1');
-INSERT INTO `equipment`(`id`, `tipo`, `marca`, `modelo`, `serie`, `mac_ethernet`, `mac_wifi`, `enterprise_id`) VALUES (NULL,'All In One','Dell','Optiplex 9010','4S3S8V1','5CF9:DDDC:E8DB',NULL,'1');
-
-#Accounts#
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, NULL, NULL, NULL, 'utic.fsta.admcntr','1');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'daniela.cisneros', 'daniela.cisneros', 'daniela.cisneros', 'utic.fsta.admsrv','2');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'rene.nino', 'rene.nino', 'rene.nino', 'utic.fsta.crdmssrv','3');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, NULL, NULL, NULL, NULL,'4');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'miguel.acosta', 'miguel.acosta', NULL, 'utic.fsta.admpryc','5');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'cimar.martinez', 'cimar.martinez', NULL, 'utic.fsta.arqsftw','6');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'laura.fernandez', 'laura.fernandez', NULL, 'utic.fsta.arqbd','7');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'jorge.arango', 'jorge.arango', NULL, 'utic.fsta.arqbd02','8');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'joaquin.avila', 'joaquin.avila', NULL, 'utic.fsta.seg','9');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'elia.aguilar', 'elia.aguilar', NULL, 'utic.fsta.prbs','10');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'bentura.cabanas', 'bentura.cabanas', 'bentura.cabanas', 'utic.fsta.anlst','11');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'israel.noriega', 'israel.noriega', 'israel.noriega', 'utic.fsta.anlst02','12');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'samuel.sandoval', NULL, 'samuel.sandoval', 'utic.fsta.anlst03','13');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'dolores.garcia', 'dolores.garcia', NULL, 'utic.fsta.anlst04','14');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'angelica.hernandez', 'angelica.hernandez', NULL, 'utic.fsta.arqbd05','15');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'edgar.morales', 'edgar.morales', NULL, 'utic.fsta.arqbd06','16');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'jose.martinez', 'jose.martinez', NULL, 'utic.fsta.arqbd07','17');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'pablo.sanchez', 'pablo.sanchez', NULL, 'utic.fsta.doc','18');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'antonio.montes', 'antonio.montes', 'antonio.montes', 'utic.fsta.doc02','19');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'saheli.guerrero', 'saheli.guerrero', NULL, 'utic.fsta.doc03','20');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'juan.iglecias', 'juan.iglecias', NULL, 'utic.fsta.doc04','21');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'rodrigo.severo', 'rodrigo.severo', NULL, 'utic.fsta.doc05','22');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'diana.dorantes', 'diana.dorantes', NULL, 'utic.fsta.dsndx','23');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'erica.parra','erica.parra','erica.parra','utic.fsta.apy','24');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'antonio.rodriguez','antonio.rodriguez', NULL, 'utic.fsta.scrmm01','25');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'carlos.martinez','carlos.martinez', NULL,'utic.fsta.scrmm02','26');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'xitlaly.ireta','xitlaly.ireta', NULL, 'utic.fsta.scrmm03','27');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'astrid.alpizar','astrid.alpizar', NULL,'utic.fsta.scrmm04','28');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'alejandro.serrano','alejandro.serrano', NULL ,'utic.fsta.scrmm05','29');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'aaron.hernandez','aaron.hernandez', NULL,'utic.fsta.scrmm06','30');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, NULL , NULL, NULL,'utic.fsta.scrmm07','31');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'juan.duran','juan.duran', 'juan.duran','utic.fsta.dsrrw01','32');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'ignacio.palos','ignacio.palos', 'ignacio.palos','utic.fsta.dsrrw02','33');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'oscar.estrada','oscar.estrada', NULL ,'utic.fsta.dsrrw03','34');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'misael.mendoza','misael.mendoza','misael.mendoza','utic.fsta.dsrrw04','35');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'cesar.martinez','cesar.martinez','cesar.martinez','utic.fsta.dsrrw05','36');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'enrique.beltran','enrique.beltran' ,NULL ,'utic.fsta.dsrrw06','37');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'sergio.ramos','ergio.ramos', NULL, 'utic.fsta.dsrrw07','38');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'marco.aguila','marco.aguila', NULL,'utic.fsta.dsrrw08'.'39');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'andres.tapia','andres.tapia', NULL,'utic.fsta.dsrrw09','40');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'andreyev.lopez','andreyev.lopez', NULL,'utic.fsta.dsrrw10','41');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'luis.rojas','luis.rojas', NULL ,'utic.fsta.dsrrw11','42');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'gilberto.amaro','gilberto.amaro', NULL ,'utic.fsta.dsrrw12','43');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'alondra.ortiz','alondra.ortiz','alondra.ortiz','utic.fsta.dsrrw13','44');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'jaffet.gonzalez','jaffet.gonzalez', NULL,'utic.fsta.dsrrw14','45');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'oscar.moreno','oscar.moreno', NULL,'utic.fsta.dsrrw15','46');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'sergio.perez','sergio.perez', NULL,'utic.fsta.dsrrw16','47');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'nazario.gonzalez','nazario.gonzalez', NULL ,'utic.fsta.dsrrw17','48');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL,  NULL , NULL, NULL, 'utic.fsta.dsrrw18','49');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'meshly.nava','meshly.nava', NULL ,'utic.fsta.dsrrw19','50');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'miguel.roman','miguel.roman', NULL ,'utic.fsta.dsrrw20','51');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'jose.mancera','jose.mancera','jose.mancera','utic.fsta.dsrrcs01','52');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'ernesto.gonzalez','ernesto.gonzalez','ernesto.gonzalez','utic.fsta.dsrrcs02','53');
-INSERT INTO `accounts`(`id`, `account_gitlab`, `account_jira`, `account_glpi`, `account_da`, `collaborator_id`) VALUES (NULL, 'adrian.hernandez','adrian.hernandez', NULL,'utic.fsta.dsrrmv01','54');
-
-
-#Services#
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.6','0','1');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.7','1','2');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.114','1','3');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','4');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','5');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0','10.35.148.4','1','6');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','7');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','8');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','9');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','10');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.5','1','11');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.10','1','12');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.83','1','13');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.98','1','14');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','15');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','16');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','17');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.3','1','18');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.9','1','19');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.84','1','20');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','21');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','22');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','23');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.2','1','24');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.18','1','25');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.34','1','26');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.85','1','27');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','28');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','29');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','30');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','31');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.50','1','32');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`)VALUES (NULL,'0','10.35.148.66','1','33');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0','10.35.148.130','1','34');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','35');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.33.148.210','1','36');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','37');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','38');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','39');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','40');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','41');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','42');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','43');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.249.82','1','44');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','45');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','46');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','47');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','48');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','49');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.249.98','1','50');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'0','51');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.82','1','52');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'1','10.35.148.146','1','53');
-INSERT INTO `services`(`id`, `internet`, `ip`, `vpn`, `collaborator_id`) VALUES (NULL,'0',NULL,'1','54');
 
 
 

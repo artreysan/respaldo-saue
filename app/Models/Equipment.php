@@ -10,6 +10,7 @@ class Equipment extends Model
     use HasFactory;
 
     public $timestamps = false;
+<<<<<<< HEAD
 
     protected $fillable = [
         'name',
@@ -28,4 +29,6 @@ class Equipment extends Model
     }
 
 
+=======
+>>>>>>> bd033d6b52d21121fd3154a15f1700a377c83440
 }
